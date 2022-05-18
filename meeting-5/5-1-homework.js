@@ -10,19 +10,19 @@ function loginUser(email, password, callback) {
   setTimeout(() => {
     console.log("Now we have the data of user:", email);
     callback({ userEmail: email });
-  }, 3000);
+  }, 2000);
 }
 
 function getUserVideos(email, callback) {
   setTimeout(() => {
     callback(usersDB[email]);
-  }, 2000);
+  }, 4000);
 }
 
 function videoDetails(video, callback) {
   setTimeout(() => {
     callback(video.title);
-  }, 2000);
+  }, 4000);
 }
 
 const getPassedUsersFirstVideoTitle = (user) =>
@@ -37,3 +37,6 @@ const getPassedUsersFirstVideoTitle = (user) =>
   });
 
 getPassedUsersFirstVideoTitle("user1@hw.js");
+
+
+console.log("Finish");
